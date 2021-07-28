@@ -6,5 +6,7 @@ public class Sale {
         MaxSales service1 = new MaxSales();
         AvgSales service2 = new AvgSales();
         SumSales service3 = new SumSales();
+        SalesLowAvg service4 = new SalesLowAvg();
+        SalesHighAvg service5 = new SalesHighAvg();
     }
 }
