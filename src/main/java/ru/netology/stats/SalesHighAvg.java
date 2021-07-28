@@ -4,12 +4,13 @@ public class SalesHighAvg {
     public int salHighAvg(long[] sales) {
         AvgSales service = new AvgSales();
         int avgSales = service.avgSales(sales);
+        int countMon = 0;
         for (long saleMon : sales) {
             if (saleMon > avgSales) {
-                System.out.println(saleMon);
+                countMon++;
             }
         }
-        return 0;
+        return countMon;
     }
 }
 

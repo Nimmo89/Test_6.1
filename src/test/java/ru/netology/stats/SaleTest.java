@@ -1,7 +1,9 @@
 package ru.netology.stats;
+import org.junit.jupiter.api.Test;
 
-public class Sale {
-    public static void sale() {
+public class SaleTest {
+    @Test
+    public void sale(){
         MinSales service = new MinSales();
         MaxSales service1 = new MaxSales();
         AvgSales service2 = new AvgSales();
