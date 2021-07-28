@@ -12,6 +12,6 @@ public class MinSalesTest {
         MinSales service = new MinSales();
         long[] sales = {8,15,13,15,17,20,19,20,7,14,14,18};
         long minMonSales = service.minSales(sales);
-        System.out.println(minMonSales + "й месяц");
+        System.out.println("В " + minMonSales + "м месяце был минимум продаж");
     }
 }

@@ -12,7 +12,7 @@ public class MaxSalesTest {
         MaxSales service = new MaxSales();
         long[] sales = {8,15,13,15,17,20,19,20,7,14,14,18};
         long maxMonSales = service.maxSales(sales);
-        System.out.println(maxMonSales + "й месяц");
+        System.out.println("В " + maxMonSales + "м месяце был пик продаж");
 
     }
 }
