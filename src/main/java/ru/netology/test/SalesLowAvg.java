@@ -1,4 +1,4 @@
-package ru.netology.stats;
+package ru.netology.test;
 
 public class SalesLowAvg {
     public long salLowAvg(long[] sales) {

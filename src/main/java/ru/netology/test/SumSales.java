@@ -1,4 +1,4 @@
-package ru.netology.stats;
+package ru.netology.test;
 
 public class SumSales {
     public int sumSales(long[] sales) {

@@ -1,18 +1,17 @@
-package ru.netology.stats;
+package ru.netology.test;
 
-public class MinSales {
-
-    public int minSales(long[] sales) {
-        int minMonth = 0;
+public class MaxSales {
+    public int maxSales(long[] sales) {
+        int maxMonth = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
         for (long sale : sales) {
-            // sales[minMonth] - продажи в месяце minMonth
+            // sales[maxMonth] - продажи в месяце maxMonth
             // sale - продажи в рассматриваемом месяце
-            if (sale <= sales[minMonth]) {
-                minMonth = month;
+            if (sale >= sales[maxMonth]) {
+                maxMonth = month;
             }
             month = month + 1; // следующий рассматриваемый месяц имеет номер на 1 больше
         }
-        return minMonth + 1;
+        return maxMonth + 1;
     }
 }
