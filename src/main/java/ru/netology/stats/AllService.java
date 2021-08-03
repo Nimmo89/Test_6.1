@@ -2,19 +2,14 @@ package ru.netology.stats;
 
 public class AllService {
 
-    public int avgSales(long[] sales) {
-        long avgMonth = 0;
-        for (long avg = 0; avg < 12; avg++) {
-            avgMonth += sales[(int) avg];
-        }
-        avgMonth /= 12;
-        return (int) avgMonth;
+    public int avgSales(int[] sales) {
+        return sumSales(sales) / sales.length;
     }
 
-    public int maxSales(long[] sales) {
+    public int maxSales(int[] sales) {
         int maxMonth = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
-        for (long sale : sales) {
+        for (int sale : sales) {
             // sales[maxMonth] - продажи в месяце maxMonth
             // sale - продажи в рассматриваемом месяце
             if (sale >= sales[maxMonth]) {
@@ -25,10 +20,10 @@ public class AllService {
         return maxMonth + 1;
     }
 
-    public int minSales(long[] sales) {
+    public int minSales(int[] sales) {
         int minMonth = 0;
         int month = 0; // переменная для индекса рассматриваемого месяца в массиве
-        for (long sale : sales) {
+        for (int sale : sales) {
             // sales[minMonth] - продажи в месяце minMonth
             // sale - продажи в рассматриваемом месяце
             if (sale <= sales[minMonth]) {
@@ -39,10 +34,10 @@ public class AllService {
         return minMonth + 1;
     }
 
-    public int salHighAvg(long[] sales) {
-        long avgMonth = avgSales(sales);
+    public int salHighAvg(int[] sales) {
+        int avgMonth = avgSales(sales);
         int countMon = 0;
-        for (long saleMon : sales) {
+        for (int saleMon : sales) {
             if (saleMon > avgMonth) {
                 countMon++;
             }
@@ -50,10 +45,10 @@ public class AllService {
         return countMon;
     }
 
-    public long salLowAvg(long[] sales) {
-        long avgMonth = avgSales(sales);
+    public int salLowAvg(int[] sales) {
+        int avgMonth = avgSales(sales);
         int countMon = 0;
-        for (long saleMon : sales) {
+        for (int saleMon : sales) {
            if (saleMon < avgMonth) {
                 countMon++;
             }
@@ -61,7 +56,7 @@ public class AllService {
         return countMon;
     }
 
-    public int sumSales(long[] sales) {
+    public int sumSales(int[] sales) {
         int sumMonth = 0;
         for (int sum = 0; sum < 12; sum++) {
             sumMonth += sales[sum];
