@@ -2,8 +2,8 @@ package ru.netology.stats;
 
 public class AllService {
 
-    public int avgSales(int[] sales) {
-        return sumSales(sales) / sales.length;
+    public int avgSales(int[] sales) {  //вычисление среднего значения массива
+        return sumSales(sales) / sales.length; //деление суммы массива на количество значений
     }
 
     public int maxSales(int[] sales) {
